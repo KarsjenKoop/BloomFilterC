@@ -142,17 +142,17 @@ BLOOM_FILTER_EXPORT(*my_bf, buffer, bf->byte_size);
 Bloom Filters typically have a tunable false-positive rate determined by the filter size and the number of hash functions.
 
 Notes and Considerations
-	•	False Positives: Bloom filters may yield false positives (reporting membership when the item is not actually present). However, there are no false negatives.
-	•	Memory Alignment: Ensure your bits parameter is a multiple of 8. Otherwise, the macro returns NULL.
-	•	Thread-Safety: This implementation is not inherently thread-safe. Synchronize access if multiple threads share a filter.
-	•	Non-Cryptographic Hashes: FNV-1a and DJB2 are fast, but not cryptographically secure.
+* False Positives: Bloom filters may yield false positives (reporting membership when the item is not actually present). However, there are no false negatives.
+* Memory Alignment: Ensure your bits parameter is a multiple of 8. Otherwise, the macro returns NULL.
+* Thread-Safety: This implementation is not inherently thread-safe. Synchronize access if multiple threads share a filter.
+* Non-Cryptographic Hashes: FNV-1a and DJB2 are fast, but not cryptographically secure.
 
 Contributing
 
 Contributions, bug reports, and feature requests are welcome. Please:
-	1.	Fork the repo
-	2.	Create a branch for your changes
-	3.	Submit a Pull Request describing your changes
+1. Fork the repo
+2.	Create a branch for your changes
+3.	Submit a Pull Request describing your changes
 
 License
 
